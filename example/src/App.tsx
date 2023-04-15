@@ -1,13 +1,24 @@
 import * as React from 'react';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
-import { StyleSheet, View } from 'react-native';
-import { IosToggleView } from 'react-native-ios-toggle';
+import { StyleSheet } from 'react-native';
+import Toggle from 'react-native-ios-toggle';
 
 export default function App() {
+  const [enabled, setEnabled] = React.useState(false);
+
+  const onSwitchChange = (value: boolean) => setEnabled(value);
+
   return (
-    <View style={styles.container}>
-      <IosToggleView color="#32a852" style={styles.box} />
-    </View>
+    <GestureHandlerRootView style={styles.container}>
+      <Toggle
+        dark
+        thumbColor="black"
+        backgroundColor={{ false: 'white', true: 'red' }}
+        onValueChange={onSwitchChange}
+        value={enabled}
+      />
+    </GestureHandlerRootView>
   );
 }
 
