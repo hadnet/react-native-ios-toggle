@@ -1,6 +1,6 @@
 {
   "name": "@hadnet/react-native-ios-toggle",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A modern iOS toggle component for RN made it with Reanimated (better perf), haptics feedback and fully customizable.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
