@@ -40,6 +40,11 @@ project.xcworkspace
 local.properties
 android.iml
 
+# env
+.env
+.env.production
+.env.prod
+
 # Cocoapods
 #
 example/ios/Pods
