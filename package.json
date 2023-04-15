@@ -1,7 +1,7 @@
 {
-  "name": "react-native-ios-toggle",
+  "name": "@hadnet/react-native-ios-toggle",
   "version": "0.1.0",
-  "description": "test",
+  "description": "A modern iOS toggle component for RN made it with Reanimated (better perf), haptics feedback and fully customizable.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",
@@ -32,6 +32,8 @@
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "prepack": "bob build",
     "release": "dotenv release-it",
+    "release:alpha": "dotenv yarn release-it --preRelease=alpha",
+    "release:beta": "dotenv yarn release-it --preRelease=beta",
     "example": "yarn --cwd example",
     "bootstrap": "yarn example && yarn install && yarn example pods",
     "clean": "del-cli android/build example/android/build example/android/app/build example/ios/build"
@@ -49,6 +51,7 @@
   },
   "homepage": "https://github.com/hadnet/react-native-ios-toggle#readme",
   "publishConfig": {
+    "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
   "devDependencies": {
@@ -117,7 +120,8 @@
     },
     "plugins": {
       "@release-it/conventional-changelog": {
-        "preset": "angular"
+        "preset": "angular",
+        "infile": "CHANGELOG.md"
       }
     }
   },
